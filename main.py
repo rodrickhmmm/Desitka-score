@@ -17,25 +17,26 @@ canvas.pack()
 
 button1 = None
 button2 = None
+button3 = None
+
+def clearnutigui():
+    global button1, button2
+    canvas.delete("all")
+    if button1:
+        button1.destroy()
+    if button2:
+        button2.destroy()
+    if button3:
+        button3.destroy()
 
 def hostovani():
-    global button1, button2
-    canvas.delete("all")
-    if button1:
-        button1.destroy()
-    if button2:
-        button2.destroy()
+    clearnutigui()
 
 def pripojeni():
-    global button1, button2
-    canvas.delete("all")
-    if button1:
-        button1.destroy()
-    if button2:
-        button2.destroy()
+    clearnutigui()
 
 def main_menu():
-    global button1, button2
+    global button1, button2, button3
 
     canvas.create_rectangle(0,0,1080/2,200,fill="grey")
     canvas.create_text(canvas_width/2,150,text="Score",fill="white", font=("Helvetica", 50, "bold"))
