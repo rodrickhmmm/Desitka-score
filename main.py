@@ -9,8 +9,8 @@ import io
 #do tadytoho nejlépe nešahat!!!
 root = tk.Tk()
 root.title("Desítka score")
-canvas_width = 1080/2
-canvas_height = 2210/2
+canvas_width = 1080
+canvas_height = 2210
 canvas = tk.Canvas(root, width=canvas_width, height=canvas_height, bg="#32373B")
 canvas.pack()
 
@@ -44,7 +44,7 @@ padding = 40
 def header():
     canvas.create_rectangle(0,0,canvas_width,220+padding,fill="#545D63")
     canvas.create_image(canvas_width/2,50+padding,image=pic)
-    canvas.create_text(canvas_width/2,160+padding,text="SCORE",fill="black", font=("Poppins", 70, "bold" ))
+    canvas.create_text(canvas_width/2,160+padding,text="SCORE",fill="black", font=("Open Sans", 70, "bold" ))
 
 #clearne cely gui
 def clearnutigui():
@@ -67,7 +67,7 @@ def vytvorit_tlacitko(text, command, y):
         canvas,
         text=text,
         fg_color='#677279',
-        font=("Poppins", 50),
+        font=("Open Sans", 50),
         width=canvas_width / 1.1,
         height=90,
         command=command,
@@ -86,8 +86,8 @@ def hostovani():
     
     header()
     
-    canvas.create_text(canvas_width/2,300+padding,text="Hostování skóre",fill="white", font=("Poppins", 40, "bold" ))
-    canvas.create_text(canvas_width/2,350+padding,text="Počkej, než se napojí všichni hráči",fill="white", font=("Poppins", 20,))
+    canvas.create_text(canvas_width/2,300+padding,text="Hostování skóre",fill="white", font=("Open Sans", 40, "bold" ))
+    canvas.create_text(canvas_width/2,350+padding,text="Počkej, než se napojí všichni hráči",fill="white", font=("Open Sans", 20,))
     button4 = vytvorit_tlacitko("Zpátky do menu",main_menu,900)
 
 # Scena(?) s pripojenim do hry
@@ -99,12 +99,12 @@ def pripojeni():
 
     padding2=100
     
-    entry = customtkinter.CTkEntry(canvas, placeholder_text="Jméno", width=455, fg_color="#677279",font=("Poppins", 50),placeholder_text_color="#d6d6d6")
+    entry = customtkinter.CTkEntry(canvas, placeholder_text="Jméno", width=455, fg_color="#677279",font=("Open Sans", 50),placeholder_text_color="#d6d6d6")
     entry.place(x=40,y=220+padding*3+padding2)
     
     canvas.create_rectangle(20,300,canvas_width-20,500+padding2,fill="#545D63")
     
-    canvas.create_text(canvas_width/2,320+padding,text="Zadej své jméno",fill="white", font=("Poppins", 40, "bold" ))
+    canvas.create_text(canvas_width/2,320+padding,text="Zadej své jméno",fill="white", font=("Open Sans", 40, "bold" ))
     
     button3 = vytvorit_tlacitko("Připojit se",0,570)
     
